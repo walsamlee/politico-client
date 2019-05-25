@@ -1,10 +1,9 @@
 import React from 'react';
-import banner from '../../indexbg.jpg';
 
 const Landing = () => (
   <div>
     <div className="center-img">
-      <img src={banner} alt="banner" />
+      <img src="https://res.cloudinary.com/walsam/image/upload/v1558784832/indexbg.jpg" alt="banner" />
     </div>
     <div className="homepage">
       <div className="sect1">
