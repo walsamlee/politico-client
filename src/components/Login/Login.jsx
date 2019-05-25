@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import logo from '../../politico.png';
 
 const Login = () => (
   <div className="sign-in-page">
     <div className="sign-in">
       <div className="signin-logo">
-        <img src="https://res.cloudinary.com/walsam/image/upload/v1558781559/politico.png" alt="brand-logo" />
+        <img src={logo} alt="brand-logo" />
       </div>
       <div className="login-form">
         <h1><i className="fas fa-unlock-alt" /></h1>
