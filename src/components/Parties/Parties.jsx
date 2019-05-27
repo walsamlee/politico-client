@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
+import Loader from '../../utils/Loader';
 import Party from '../Party/Party';
 
 class Parties extends Component {
@@ -16,7 +17,7 @@ class Parties extends Component {
           <div className="party-view">
             {
                 data.parties.fetching
-                  ? 'Loading...'
+                  ? <Loader />
                   : data.parties.parties.map(party => (
                     <Party key={party.id} party={party} />
                   ))
