@@ -43,6 +43,10 @@ class Login extends Component {
     if (loggedInUser.user.length > 0) {
       localStorage.setItem('token', loggedInUser.user[0].token);
       localStorage.setItem('who', loggedInUser.user[0].user.isAdmin);
+      localStorage.setItem('picture', loggedInUser.user[0].user.passportUrl);
+      localStorage.setItem('email', loggedInUser.user[0].user.email);
+      localStorage.setItem('name', loggedInUser.user[0].user.name);
+      localStorage.setItem('phone', loggedInUser.user[0].user.phoneNumber);
 
       window.location = '/parties';
     }
