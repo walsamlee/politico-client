@@ -8,6 +8,7 @@ import Login from './containers/Login';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Parties from './containers/Parties';
+import Register from './containers/Register';
 
 const App = () => (
   <React.Fragment>
@@ -18,6 +19,7 @@ const App = () => (
         <Route exact path="/" component={Landing} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/parties" component={Parties} />
+        <Route exact path="/register" component={Register} />
       </Switch>
       <Footer />
     </div>

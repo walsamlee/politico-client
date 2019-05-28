@@ -38,7 +38,7 @@ const Menu = () => {
       </div>
       <div className="logout">
         <Link to="/login" id="login">Login</Link>
-        <Link to="/signup" id="signup">Register</Link>
+        <Link to="/register" id="signup">Register</Link>
       </div>
     </nav>
   );

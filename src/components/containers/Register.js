@@ -1,20 +1,20 @@
 import { connect } from 'react-redux';
 import authAction from '../../actions/authAction';
-import Login from '../Login/Login';
+import Register from '../Register/Register';
 
 const mapStateToProps = state => ({
   data: state,
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchUser: (userData) => {
-    dispatch(authAction.fetchUser(userData));
+  registerUser: (userData) => {
+    dispatch(authAction.registerUser(userData));
   },
 });
 
-const AuthLogin = connect(
+const AuthRegister = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Login);
+)(Register);
 
-export default AuthLogin;
+export default AuthRegister;
