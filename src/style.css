@@ -530,6 +530,7 @@ a:hover {
 }
 
 .history-board .vote {
+    display: flex;
     margin: 10px auto 20px;
     overflow: auto;
     padding: 10px;
@@ -798,10 +799,12 @@ a:hover {
         margin: 10px 20px;
     }
     .history-board .vote {
+        flex-direction: column;
         width: 70%;
         text-align: center;
     }
     .history-board .vote .vote-date {
+        margin-top: 15px;
         width: 100%;
         float: none;
     }
@@ -813,7 +816,10 @@ a:hover {
         width: 100%;
         float: none;
         margin: 10px 0;
-    } 
+    }
+    .history-board .vote .candidate-details .candidate-particulars p {
+        text-align: center;
+    }
     .history-board .vote .candidate-details .candidate-image {
         width: 100%;
         float: none;
@@ -822,12 +828,11 @@ a:hover {
         width: 40%;
     }
     .history-board .vote .party-details {
-        width: 100%;
+        width: 50%;
         float: none;
-        margin: 10px 0;
     }
     .history-board .vote .party-details img {
-        width: 30%;
+        width: 100%;
     }
     .party-view {
         grid-template-columns: auto auto;

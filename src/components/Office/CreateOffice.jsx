@@ -42,39 +42,37 @@ class CreateOffice extends Component {
 
   render() {
     return (
-      <div className="main">
-        <div className="dashboard">
-          <div className="signup-form">
-            <form id="create-office" name="sign-up" onSubmit={this.submitHandler} onReset={this.resetHandler}>
-              <table className="form-table">
-                <tr>
-                  <td className="label" />
-                  <td>
-                    <input id="office-id" type="text" name="officeid" placeholder="Office ID" required onChange={this.changeHandler} value={this.state.officeid} />
-                  </td>
-                </tr>
-                <tr>
-                  <td className="label" />
-                  <td>
-                    <input id="office-type" type="text" name="officetype" placeholder="Office Type" required onChange={this.changeHandler} value={this.state.officetype} />
-                  </td>
-                </tr>
-                <tr>
-                  <td className="label" />
-                  <td>
-                    <input id="officename" type="text" name="officename" placeholder="Office Name" required onChange={this.changeHandler} value={this.state.officename} />
-                  </td>
-                </tr>
-                <tr>
-                  <td />
-                  <td>
-                    <input type="submit" className="btn btn-cart" value="Save" />
-                    <input type="reset" className="btn btn-cart" value="Reset" onClick={this.resetHandler} />
-                  </td>
-                </tr>
-              </table>
-            </form>
-          </div>
+      <div className="dashboard">
+        <div className="signup-form">
+          <form id="create-office" name="sign-up" onSubmit={this.submitHandler} onReset={this.resetHandler}>
+            <table className="form-table">
+              <tr>
+                <td className="label" />
+                <td>
+                  <input id="office-id" type="text" name="officeid" placeholder="Office ID" required onChange={this.changeHandler} value={this.state.officeid} />
+                </td>
+              </tr>
+              <tr>
+                <td className="label" />
+                <td>
+                  <input id="office-type" type="text" name="officetype" placeholder="Office Type" required onChange={this.changeHandler} value={this.state.officetype} />
+                </td>
+              </tr>
+              <tr>
+                <td className="label" />
+                <td>
+                  <input id="officename" type="text" name="officename" placeholder="Office Name" required onChange={this.changeHandler} value={this.state.officename} />
+                </td>
+              </tr>
+              <tr>
+                <td />
+                <td>
+                  <input type="submit" className="btn btn-cart" value="Save" />
+                  <input type="reset" className="btn btn-cart" value="Reset" onClick={this.resetHandler} />
+                </td>
+              </tr>
+            </table>
+          </form>
         </div>
       </div>
     );

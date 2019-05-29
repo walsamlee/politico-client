@@ -10,6 +10,7 @@ import Footer from './Footer/Footer';
 import Parties from './containers/Parties';
 import Register from './containers/Register';
 import CreateOffice from './containers/CreateOffice';
+import Candidates from './Candidates/Candidates';
 
 const App = () => (
   <React.Fragment>
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path="/parties" component={Parties} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/create-office" component={CreateOffice} />
+        <Route exact path="/candidates" component={Candidates} />
       </Switch>
       <Footer />
     </div>
