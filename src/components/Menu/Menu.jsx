@@ -24,7 +24,7 @@ const Menu = () => {
       <nav>
         <div className="pry-menu-items">
           <Link to="/parties">Parties</Link>
-          <Link to="/vote">Vote</Link>
+          <Link to="/candidates">Vote</Link>
           <Link to="/history">Voting History</Link>
         </div>
         <Logout />
