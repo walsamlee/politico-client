@@ -27,7 +27,9 @@ const Menu = () => {
           <Link to="/candidates">Vote</Link>
           <Link to="/history">Voting History</Link>
         </div>
-        <Logout />
+        <div className="logout">
+          <Logout />
+        </div>
       </nav>
     );
   }

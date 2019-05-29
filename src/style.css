@@ -420,6 +420,82 @@ a:hover {
     width: 98%;
 }
 
+.user-info {
+    overflow: auto;
+    background: #ccc;
+}
+
+.user-info-main {
+    margin: 20px 0;
+    padding: 10px 50px;
+    display: flex;
+    background: #fff;
+    min-height: 150px;
+}
+
+.user-info-main .user-profile-details {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info-main .profile-pic {
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: 120px;
+}
+
+.user-info-main .profile-pic img {
+    width: 100%;
+}
+
+.user-info-main .profile-details {
+    padding: 10px 20px;
+}
+
+.user-info-main .profile-details .btn-cart{
+    color: #fff;
+    background: #003566;
+    margin: 0;
+}
+
+.user-info-main .office-interest .btn-cart {
+    color: #fff;
+    background: #003566;
+    margin: 0;
+}
+
+.user-info-main .profile-details .btn-cart:hover, .user-info-main .office-interest .btn-cart:hover {
+    background: #00213f;
+}
+
+.user-info-main .profile-details h3, .user-info-main .profile-details p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.user-info-main .office-interest {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.user-info-main .office-interest h3 {
+    margin: 0;
+}
+
+.user-info-main .office-interest label {
+    padding: 5px 10px 5px 0;
+}
+
+.user-info-main .office-interest .party-selector, .user-info-main .office-interest  .office-selector {
+    margin: 5px 0;
+}
+
 .form-table {
     width: 100%;
 }
@@ -837,6 +913,23 @@ a:hover {
     .party-view {
         grid-template-columns: auto auto;
     }
+
+    .user-info-main {
+        flex-direction: column;
+    }
+
+    .user-info-main .user-profile-details {
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 15px 0;
+        border-bottom: solid 1px #ccc;
+    }
+
+    .user-info-main .office-interest {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
   }
 
 @media screen and (max-width: 450px) {
@@ -851,5 +944,32 @@ a:hover {
     }
     .party-view {
         grid-template-columns: auto;
+    }
+
+    .user-info-main .user-profile-details {
+        flex-direction: column;
+    }
+
+    .user-info-main .profile-pic {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .user-info-main .profile-details {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .user-info-main .profile-details p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .user-info-main .profile-pic {
+        width: 80px;
+        height: 80px;
     }
 }
