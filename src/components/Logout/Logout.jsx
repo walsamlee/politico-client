@@ -14,10 +14,7 @@ class Logout extends Component {
 
   render() {
     return (
-      <div className="logout">
-        <button type="submit" id="user-icon"><i className="fas fa-user" /></button>
-        <button type="submit" id="logout" onClick={this.logoutHandler}>Logout</button>
-      </div>
+      <button type="submit" id="logout" onClick={this.logoutHandler}>Logout</button>
     );
   }
 }
