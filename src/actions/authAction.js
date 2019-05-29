@@ -28,17 +28,24 @@ const fetchUser = loginData => ((dispatch) => {
 });
 
 const registerUser = userData => ((dispatch) => {
-  dispatch({ type: 'GET_REGISTERED_USER' });
+  dispatch({ type: 'REGISTER_USER' });
   API.authSignup(userData)
     .then((user) => {
       if (user.status === 400) {
         toast.error(user.error);
         dispatch({
-          type: 'GET_REGISTERED_USER_ERROR',
+          type: 'REGISTER_USER_ERROR',
           payload: user.error,
         });
       }
       if (user.status === 200) {
+        toast.success('Account has been successfully created');
+
+        dispatch({
+          type: 'REGISTER_USER_SUCCESS',
+          payload: user.data,
+        });
+
         localStorage.setItem('token', user.data[0].token);
         localStorage.setItem('who', user.data[0].user.isAdmin);
         localStorage.setItem('picture', user.data[0].user.passportUrl);
@@ -47,18 +54,12 @@ const registerUser = userData => ((dispatch) => {
         localStorage.setItem('phone', user.data[0].user.phoneNumber);
 
         window.location = '/parties';
-
-        toast.success('Account has been successfully created');
-
-        dispatch({
-          type: 'RETURN_REGISTERED_USER',
-          payload: user.data,
-        });
       }
     })
     .catch((err) => {
+      toast.error(err);
       dispatch({
-        type: 'GET_REGISTERED_USER_CATCH_ERROR',
+        type: 'REGISTER_USER_CATCH_ERROR',
         payload: err,
       });
     });
