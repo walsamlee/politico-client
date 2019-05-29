@@ -1,6 +1,19 @@
 const apiUrl = 'https://sam-politico.herokuapp.com/api/v1/parties';
 const authUrl = 'https://sam-politico.herokuapp.com/api/v1/auth/login';
 const signupUrl = 'https://sam-politico.herokuapp.com/api/v1/auth/signup';
+const addOfficeUrl = 'https://sam-politico.herokuapp.com/api/v1/offices';
+
+const addOffice = (officeData, token) => (
+  fetch(addOfficeUrl, {
+    method: 'POST',
+    body: JSON.stringify(officeData),
+    headers: {
+      'Content-Type': 'application/json',
+      token,
+    },
+  })
+    .then(res => res.json())
+);
 
 const getAllParties = () => (
   fetch(apiUrl)
@@ -33,6 +46,7 @@ const API = {
   getAllParties,
   authLogin,
   authSignup,
+  addOffice,
 };
 
 export default API;

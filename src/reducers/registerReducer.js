@@ -1,28 +1,36 @@
 const initialState = {
-  fetching: false,
-  fetched: false,
+  registering: false,
+  registered: false,
   user: [],
   error: null,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_USER': {
-      return { ...state, fetching: true };
+    case 'REGISTER_USER': {
+      return { ...state, registering: true };
     }
-    case 'RETURN_USER': {
+    case 'REGISTER_USER_SUCCESS': {
       return {
         ...state,
-        fetching: false,
-        fetched: true,
+        registering: false,
+        registered: true,
         user: action.payload,
       };
     }
-    case 'GET_USER_ERROR': {
+    case 'REGISTER_USER_ERROR': {
       return {
         ...state,
-        fetching: false,
-        fetched: false,
+        registering: false,
+        registered: false,
+        error: action.payload,
+      };
+    }
+    case 'REGISTER_USER_CATCH_ERROR': {
+      return {
+        ...state,
+        registering: false,
+        registered: false,
         error: action.payload,
       };
     }
