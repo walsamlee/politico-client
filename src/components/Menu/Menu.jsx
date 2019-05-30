@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-for */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logout from '../Logout/Logout';
@@ -21,7 +23,9 @@ const Menu = () => {
           </nav>
           <div className="mini-menu-icon">
             <img src="https://res.cloudinary.com/walsam/image/upload/v1559199507/politico-mini.png" alt="logo" />
-            <button type="submit"><i className="fas fa-bars" /></button>
+            <label htmlFor="checker" className="checker-label">
+              <p><i className="fas fa-bars" /></p>
+            </label>
           </div>
         </div>
       );
@@ -40,7 +44,9 @@ const Menu = () => {
         </nav>
         <div className="mini-menu-icon">
           <img src="https://res.cloudinary.com/walsam/image/upload/v1559199507/politico-mini.png" alt="logo" />
-          <button type="submit"><i className="fas fa-bars" /></button>
+          <label htmlFor="checker">
+            <p><i className="fas fa-bars" /></p>
+          </label>
         </div>
       </div>
     );
@@ -58,7 +64,9 @@ const Menu = () => {
       </nav>
       <div className="mini-menu-icon">
         <img src="https://res.cloudinary.com/walsam/image/upload/v1559199507/politico-mini.png" alt="logo" />
-        <button type="submit"><i className="fas fa-bars" /></button>
+        <label htmlFor="checker">
+          <p><i className="fas fa-bars" /></p>
+        </label>
       </div>
     </div>
   );
