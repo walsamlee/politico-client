@@ -135,8 +135,15 @@ a:hover {
     padding-left: 25px;
 }
 
-.mini-menu-icon a {
+.mini-menu-icon {
     display: none;
+    padding: 0 10px;
+}
+
+.mini-menu-icon img {
+    width: 45px;
+    height: 45px;
+    padding-left: 5px;
 }
 
 .center-img {
@@ -816,14 +823,21 @@ a:hover {
     .menu a, .menu .logout {
         display: none;
     }
-    .mini-menu-icon a {
+    .mini-menu-icon {
+        display: flex;
+        justify-content: space-between;
+    }
+    .mini-menu-icon button {
         display: block;
         margin: 10px;
-        float: right;
         color: #fff;
         padding: 5px 15px;
+        background: #01213D;
         border: 1px solid #fff;
         border-radius: 4px;
+    }
+    .mini-menu-icon button:hover {
+        background: #013463;
     }
     .sign-in {
         width: 75%;
@@ -845,7 +859,7 @@ a:hover {
     .menu.responsive {
         position: relative;
     }
-    .menu.responsive .mini-menu-icon a {
+    .menu.responsive .mini-menu-icon button {
         position: absolute;
         right: 0;
         top: 0;
