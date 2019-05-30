@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logout from '../Logout/Logout';
 
 import Menu from '../Menu/Menu';
 import Profile from '../Profile/Profile';
@@ -22,6 +23,19 @@ const Header = () => {
             <div className="menu">
               <Menu />
             </div>
+          </div>
+        </div>
+        <div>
+          <input type="checkbox" id="checker" className="checker" />
+          <div className="responsive-nav">
+            <nav>
+              <div className="pry-menu-items">
+                <Link to="/parties">Parties</Link>
+                <Link to="/candidates">Vote</Link>
+                <Link to="/history">Voting History</Link>
+              </div>
+              <Logout />
+            </nav>
           </div>
         </div>
         <Profile />

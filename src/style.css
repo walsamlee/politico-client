@@ -135,8 +135,54 @@ a:hover {
     padding-left: 25px;
 }
 
-.mini-menu-icon a {
+.mini-menu-icon {
     display: none;
+    padding: 0 10px;
+}
+
+.mini-menu-icon img {
+    width: 45px;
+    height: 45px;
+    padding-left: 5px;
+}
+
+.checker {
+    display: none;
+}
+
+.responsive-nav {
+    display: none;
+    background: #00213f;
+    padding-bottom: 10px;
+}
+
+.responsive-nav .pry-menu-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive-nav .pry-menu-items a {
+    padding: 5px 20px;
+    color: #fff;
+}
+
+.responsive-nav .pry-menu-items a:hover {
+    text-decoration: none;
+    background: #003566;
+}
+
+.responsive-nav button {
+    width: 100%;
+    padding: 5px 20px;
+    text-align: left;
+    background: #00213f;
+    font-size: 16px;
+    color: #fff;
+    border: solid 1px #00213f;
+}
+
+.responsive-nav button:hover {
+    background: #003566;
 }
 
 .center-img {
@@ -816,15 +862,28 @@ a:hover {
     .menu a, .menu .logout {
         display: none;
     }
-    .mini-menu-icon a {
+    .mini-menu-icon {
+        display: flex;
+        justify-content: space-between;
+    }
+    .mini-menu-icon p {
         display: block;
-        margin: 10px;
-        float: right;
+        padding: 0 10px;
+        margin: 5px;
         color: #fff;
-        padding: 5px 15px;
+        background: #01213D;
         border: 1px solid #fff;
         border-radius: 4px;
     }
+    .mini-menu-icon p:hover {
+        background: #013463;
+    }
+    .responsive-nav {
+        flex-direction: column;
+    }
+    .checker:checked ~ .responsive-nav {
+        display: flex;
+      }
     .sign-in {
         width: 75%;
         margin: 20px auto;
@@ -845,7 +904,7 @@ a:hover {
     .menu.responsive {
         position: relative;
     }
-    .menu.responsive .mini-menu-icon a {
+    .menu.responsive .mini-menu-icon p {
         position: absolute;
         right: 0;
         top: 0;
