@@ -16,7 +16,8 @@ const Menu = () => {
         <div>
           <nav>
             <div className="pry-menu-items">
-              <Link to="/parties">Create Party</Link>
+              <Link to="/parties">Parties</Link>
+              <Link to="/create-party">Create Party</Link>
               <Link to="/create-office">Create Office</Link>
             </div>
             <Logout />
