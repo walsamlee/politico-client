@@ -11,6 +11,7 @@ import Parties from './containers/Parties';
 import Register from './containers/Register';
 import CreateOffice from './containers/CreateOffice';
 import Candidates from './Candidates/Candidates';
+import CreateParty from './containers/CreateParty';
 
 const App = () => (
   <React.Fragment>
@@ -24,6 +25,7 @@ const App = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/create-office" component={CreateOffice} />
         <Route exact path="/candidates" component={Candidates} />
+        <Route exact path="/create-party" component={CreateParty} />
       </Switch>
       <Footer />
     </div>

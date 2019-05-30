@@ -28,7 +28,7 @@ const createOffice = (partyData, token) => ((dispatch) => {
         });
       }
       if (response.status === 201) {
-        toast.success('Party was successfully created');
+        toast.success('Office was successfully created');
         dispatch({
           type: 'CREATE_OFFICE_SUCCESS',
           payload: response.data[0],
