@@ -4,6 +4,8 @@ import login from './loginReducer';
 import register from './registerReducer';
 import createOffice from './createOfficeReducer';
 import createParty from './createPartyReducer';
+import candidate from './candidateReducer';
+import vote from './voteReducer';
 
 const allReducers = combineReducers({
   parties,
@@ -11,6 +13,8 @@ const allReducers = combineReducers({
   register,
   createOffice,
   createParty,
+  candidate,
+  vote,
 });
 
 export default allReducers;

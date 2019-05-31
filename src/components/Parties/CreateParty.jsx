@@ -51,7 +51,6 @@ class CreateParty extends Component {
     })
       .then(response => response.json())
       .then((response) => {
-        console.log('Uploaded image: ', response.url);
         this.setState({ image: response.url });
       })
       .catch(error => error);
