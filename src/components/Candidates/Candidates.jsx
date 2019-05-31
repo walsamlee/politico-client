@@ -19,17 +19,6 @@ class Candidates extends Component {
     return (
       <div className="dashboard">
         <div className="history-board">
-          <div className="candidate-form">
-            <form action="">
-              <label htmlFor="office">Choose Office: </label>
-              <select name="office" id="office">
-                {candidates.map((office) => {
-                  const { name } = office;
-                  return <option value={name}>{name}</option>;
-                })}
-              </select>
-            </form>
-          </div>
           {
             candidates.map(item => (
               <Candidate key={item.officeid} details={item} />
