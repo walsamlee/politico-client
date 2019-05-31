@@ -10,7 +10,7 @@ import Footer from './Footer/Footer';
 import Parties from './containers/Parties';
 import Register from './containers/Register';
 import CreateOffice from './containers/CreateOffice';
-import Candidates from './Candidates/Candidates';
+import Candidates from './containers/Candidates';
 import CreateParty from './containers/CreateParty';
 
 const App = () => (
