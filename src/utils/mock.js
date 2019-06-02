@@ -102,8 +102,25 @@ const registerData = {
   password: '',
 };
 
+const candidate = {
+  passporturl: '',
+  firstname: '',
+  lastname: '',
+  name: '',
+  logourl: '',
+};
+
 const mock = {
-  voteData, data, details, token, login, partiesData, partyData, profileData, registerData,
+  voteData,
+  data,
+  details,
+  token,
+  login,
+  partiesData,
+  partyData,
+  profileData,
+  registerData,
+  candidate,
 };
 
 export default mock;
