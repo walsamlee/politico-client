@@ -11,14 +11,15 @@ class Parties extends Component {
 
   render() {
     const { data } = this.props;
+    const { parties } = data;
     return (
       <div className="dashboard">
         <div className="edit-board">
           <div className="party-view">
             {
-                data.parties.fetching
+                parties.fetching
                   ? <Loader />
-                  : data.parties.parties.map(party => (
+                  : parties.parties.map(party => (
                     <Party key={party.id} party={party} />
                   ))
             }

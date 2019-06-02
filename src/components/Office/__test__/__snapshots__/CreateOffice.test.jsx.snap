@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateOffice /> should render CreateOffice component 1`] = `ShallowWrapper {}`;

@@ -53,8 +53,8 @@ export default (state = initialState, action) => {
     case 'CREATE_OFFICE_ERROR_CATCH': {
       return {
         ...state,
-        fetching: false,
-        fetched: false,
+        creating: false,
+        created: false,
         error: action.payload,
       };
     }
