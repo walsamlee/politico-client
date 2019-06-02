@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import GetOffices from '../containers/GetOffices';
 
 const Profile = () => {
   let userImage = localStorage.getItem('picture');
@@ -23,32 +24,11 @@ const Profile = () => {
           </div>
         </div>
         <div className="office-interest">
-          <h3>Run for Office</h3>
-          <form method="POST" action="">
-            <div className="party-selector">
-              <label htmlFor="party">Party: </label>
-              <select name="party">
-                <option value="0">-------------Select-----------</option>
-                <option value="1">Peoples Democratic Party</option>
-                <option value="2">Actions Congress of Nigeria</option>
-                <option value="3">Labour Party</option>
-                <option value="4">All Democratic Congress</option>
-              </select>
-            </div>
-            <div className="office-selector">
-              <label htmlFor="office">Office: </label>
-              <select name="office">
-                <option value="0">-------------Select-----------</option>
-                <option value="President">President</option>
-                <option value="Senator">Senator</option>
-                <option value="Governor">Governor</option>
-                <option value="Chairman">LGA Chairman</option>
-              </select>
-            </div>
-            <div>
-              <input type="button" className="btn btn-cart" value="Submit" />
-            </div>
-          </form>
+          <label htmlFor="office-interest-checkbox"><h3>Run for Office</h3></label>
+          <input type="checkbox" name="office-interest-checkbox" id="office-interest-checkbox" />
+          <div className="indicate-interest">
+            <GetOffices />
+          </div>
         </div>
       </div>
     </div>

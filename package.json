@@ -27,7 +27,6 @@
     "react-loader-spinner": "^2.3.0",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
-    "react-test-renderer": "^16.8.6",
     "react-toastify": "^5.1.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",

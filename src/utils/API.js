@@ -5,6 +5,25 @@ const addOfficeUrl = 'https://sam-politico.herokuapp.com/api/v1/offices';
 const addPartyUrl = 'https://sam-politico.herokuapp.com/api/v1/parties';
 const candidateUrl = 'https://sam-politico.herokuapp.com/api/v1/candidates';
 const voteUrl = 'https://sam-politico.herokuapp.com/api/v1/votes';
+const runForOfficeUrl = 'https://sam-politico.herokuapp.com/api/v1/office/run';
+const getOfficesUrl = 'https://sam-politico.herokuapp.com/api/v1/offices';
+
+const getOffices = () => (
+  fetch(getOfficesUrl)
+    .then(res => res.json())
+);
+
+const runForOffice = (aspirantData, token) => (
+  fetch(runForOfficeUrl, {
+    method: 'POST',
+    body: JSON.stringify(aspirantData),
+    headers: {
+      'Content-Type': 'application/json',
+      token,
+    },
+  })
+    .then(response => response.json())
+);
 
 const castVote = (voteData, token) => (
   fetch(voteUrl, {
@@ -15,6 +34,7 @@ const castVote = (voteData, token) => (
       token,
     },
   })
+    .then(response => response.json())
 );
 
 const getCandidates = token => (
@@ -36,6 +56,7 @@ const addParty = (partyData, token) => (
       token,
     },
   })
+    .then(response => response.json())
 );
 
 const addOffice = (officeData, token) => (
@@ -85,6 +106,8 @@ const API = {
   addParty,
   getCandidates,
   castVote,
+  runForOffice,
+  getOffices,
 };
 
 export default API;
