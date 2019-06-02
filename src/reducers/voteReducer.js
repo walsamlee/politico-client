@@ -37,8 +37,8 @@ export default (state = initialState, action) => {
     case 'VOTE_CAST_ERROR_CATCH': {
       return {
         ...state,
-        fetching: false,
-        fetched: false,
+        casting: false,
+        casted: false,
         error: action.payload,
       };
     }
