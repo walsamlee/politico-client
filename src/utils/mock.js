@@ -31,6 +31,12 @@ const data = {
       },
     ],
   },
+  getOffices: {
+    offices: [],
+  },
+  parties: {
+    parties: [],
+  },
 };
 
 const details = {
@@ -110,6 +116,17 @@ const candidate = {
   logourl: '',
 };
 
+const party = {
+  id: '',
+  name: '',
+};
+
+const aspirantData = {
+  id: '',
+  office: '',
+  party: '',
+};
+
 const mock = {
   voteData,
   data,
@@ -121,6 +138,8 @@ const mock = {
   profileData,
   registerData,
   candidate,
+  party,
+  aspirantData,
 };
 
 export default mock;

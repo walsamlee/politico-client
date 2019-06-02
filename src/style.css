@@ -530,6 +530,14 @@ a:hover {
     padding: 10px 20px;
 }
 
+.indicate-interest {
+    display: none;
+}
+
+#office-interest-checkbox:checked ~ .indicate-interest {
+    display: block;
+}
+
 .user-info-main .office-interest h3 {
     margin: 0;
 }
