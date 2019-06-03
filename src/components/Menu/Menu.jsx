@@ -20,7 +20,9 @@ const Menu = () => {
               <Link to="/create-party">Create Party</Link>
               <Link to="/create-office">Create Office</Link>
             </div>
-            <Logout />
+            <div className="logout">
+              <Logout />
+            </div>
           </nav>
           <div className="mini-menu-icon">
             <img src="https://res.cloudinary.com/walsam/image/upload/v1559199507/politico-mini.png" alt="logo" />

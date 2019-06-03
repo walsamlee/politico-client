@@ -91,7 +91,6 @@ This projects is under the ISC LICENSE
 ## Acknowledgments
 
 - [Andela](http://andela.com)
-- [Victoria Offoma (Learning Facilitator)](victoria.offoma@andela.com)
 - [Stackoverflow](stackoverflow.com)
 
 ## Contribution

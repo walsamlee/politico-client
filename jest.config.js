@@ -51,6 +51,7 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '<rootDir>/src/index.js',
     '<rootDir>/src/__test__/end2end',
+    'src/actions',
   ],
 
   setupFilesAfterEnv: ['./jest.setup.js'],
