@@ -86,6 +86,7 @@ const partiesData = {
 };
 
 const partyData = {
+  id: '',
   image: '',
   partyname: '',
   parthqaddress: '',
@@ -127,6 +128,15 @@ const aspirantData = {
   party: '',
 };
 
+const setPartyState = [
+  {
+    id: 1,
+    logoUrl: '',
+    name: '',
+    hqAddress: '',
+  },
+];
+
 const mock = {
   voteData,
   data,
@@ -140,6 +150,7 @@ const mock = {
   candidate,
   party,
   aspirantData,
+  setPartyState,
 };
 
 export default mock;
