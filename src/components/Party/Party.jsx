@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import getPrivilege from '../../utils/getPrivilege';
+import DeleteParty from '../containers/DeleteParty';
 
 const Party = ({ party }) => {
   const privilege = getPrivilege();
@@ -15,7 +16,7 @@ const Party = ({ party }) => {
         {
           <div>
             <Link to={`/editparty/${party.id}`} className="btn btn-cart">Edit</Link>
-            <Link to={`/deleteparty/${party.id}`} className="btn btn-cart">Delete</Link>
+            <DeleteParty partyId={party.id} />
           </div>
         }
       </div>

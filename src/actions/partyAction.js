@@ -1,6 +1,25 @@
 import { toast } from 'react-toastify';
 import API from '../utils/API';
 
+const deleteParty = (partyId, token) => ((dispatch) => {
+  dispatch({ type: 'DELETE_PARTY' });
+  API.deleteParty(partyId, token)
+    .then((party) => {
+      toast.success(party.data[0].message);
+      dispatch({
+        type: 'PARTY_DELETED',
+        payload: party.data[0],
+      });
+      window.location = '/parties';
+    })
+    .catch((error) => {
+      dispatch({
+        type: 'ERROR_DELETING_PARTY',
+        payload: error,
+      });
+    });
+});
+
 const fetchParties = () => ((dispatch) => {
   dispatch({ type: 'GET_PARTIES' });
   API.getAllParties()
@@ -59,4 +78,4 @@ const createParty = (partyData, token) => ((dispatch) => {
     });
 });
 
-export default { fetchParties, createParty };
+export default { fetchParties, createParty, deleteParty };

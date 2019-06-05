@@ -7,6 +7,18 @@ const candidateUrl = 'https://sam-politico.herokuapp.com/api/v1/candidates';
 const voteUrl = 'https://sam-politico.herokuapp.com/api/v1/votes';
 const runForOfficeUrl = 'https://sam-politico.herokuapp.com/api/v1/office/run';
 const getOfficesUrl = 'https://sam-politico.herokuapp.com/api/v1/offices';
+const deletePartyUrl = 'https://sam-politico.herokuapp.com/api/v1/parties';
+
+const deleteParty = (partyId, token) => (
+  fetch(`${deletePartyUrl}/${partyId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      token,
+    },
+  })
+    .then(response => response.json())
+);
 
 const getOffices = () => (
   fetch(getOfficesUrl)
@@ -108,6 +120,7 @@ const API = {
   castVote,
   runForOffice,
   getOffices,
+  deleteParty,
 };
 
 export default API;

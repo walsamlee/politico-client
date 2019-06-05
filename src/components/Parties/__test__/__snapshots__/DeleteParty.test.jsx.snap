@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeleteParty /> should render DeleteParty component 1`] = `ShallowWrapper {}`;
