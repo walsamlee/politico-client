@@ -8,6 +8,19 @@ const voteUrl = 'https://sam-politico.herokuapp.com/api/v1/votes';
 const runForOfficeUrl = 'https://sam-politico.herokuapp.com/api/v1/office/run';
 const getOfficesUrl = 'https://sam-politico.herokuapp.com/api/v1/offices';
 const deletePartyUrl = 'https://sam-politico.herokuapp.com/api/v1/parties';
+const editPartyUrl = 'https://sam-politico.herokuapp.com/api/v1/parties';
+
+const editParty = (partyName, partyId, token) => (
+  fetch(`${editPartyUrl}/${partyId}/name`, {
+    method: 'PATCH',
+    body: JSON.stringify(partyName),
+    headers: {
+      'Content-Type': 'application/json',
+      token,
+    },
+  })
+    .then(response => response.json())
+);
 
 const deleteParty = (partyId, token) => (
   fetch(`${deletePartyUrl}/${partyId}`, {
@@ -121,6 +134,7 @@ const API = {
   runForOffice,
   getOffices,
   deleteParty,
+  editParty,
 };
 
 export default API;

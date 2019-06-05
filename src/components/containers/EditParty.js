@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Parties from '../Parties/Parties';
+import EditParty from '../Parties/EditParty';
 import partyAction from '../../actions/partyAction';
 
 const mapStateToProps = state => ({
@@ -7,14 +7,14 @@ const mapStateToProps = state => ({
 });
 
 const matchDispatchToProps = dispatch => ({
-  fetchParties: () => {
-    dispatch(partyAction.fetchParties());
+  editParty: (partyName, partyId, token) => {
+    dispatch(partyAction.editParty(partyName, partyId, token));
   },
 });
 
-const PartiesContainer = connect(
+const EditPartyContainer = connect(
   mapStateToProps,
   matchDispatchToProps,
-)(Parties);
+)(EditParty);
 
-export default PartiesContainer;
+export default EditPartyContainer;

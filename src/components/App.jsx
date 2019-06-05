@@ -12,6 +12,7 @@ import Register from './containers/Register';
 import CreateOffice from './containers/CreateOffice';
 import Candidates from './containers/Candidates';
 import CreateParty from './containers/CreateParty';
+import EditParty from './containers/EditParty';
 
 const App = () => (
   <React.Fragment>
@@ -26,6 +27,7 @@ const App = () => (
         <Route exact path="/create-office" component={CreateOffice} />
         <Route exact path="/candidates" component={Candidates} />
         <Route exact path="/create-party" component={CreateParty} />
+        <Route exact path="/editparty" component={EditParty} />
       </Switch>
       <Footer />
     </div>

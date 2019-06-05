@@ -362,6 +362,12 @@ a:hover {
     padding: 5px 0;
 }
 
+.edit-notification {
+    color: #c22216;
+    margin: 0;
+    font-size: 12px;
+}
+
 #password-compare {
     display: none;
     color: #ff0505;
@@ -562,6 +568,10 @@ a:hover {
 .form-table .btn-cart:hover {
     background: #0035666e;
     color: #003566;
+}
+
+.form-table .preview img {
+    width: 200px;
 }
 
 .label {
