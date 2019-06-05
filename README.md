@@ -3,7 +3,7 @@
 # Description
 Politico is a platform that enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.
 
-[![Build Status](https://travis-ci.org/walsamlee/politico-client.svg?branch=develop)](https://travis-ci.org/walsamlee/politico-client) [![Maintainability](https://api.codeclimate.com/v1/badges/8ab04f6aa8fd6f37abb1/maintainability)](https://codeclimate.com/github/walsamlee/politico-client/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/8ab04f6aa8fd6f37abb1/test_coverage)](https://codeclimate.com/github/walsamlee/politico-client/test_coverage) [![Netlify Status](https://api.netlify.com/api/v1/badges/f0d1331e-f4dc-4b8e-a303-a71c634a4bf0/deploy-status)](https://app.netlify.com/sites/sam-politico-client/deploys)
+[![Build Status](https://travis-ci.org/walsamlee/politico-client.svg?branch=develop)](https://travis-ci.org/walsamlee/politico-client) [![Maintainability](https://api.codeclimate.com/v1/badges/8ab04f6aa8fd6f37abb1/maintainability)](https://codeclimate.com/github/walsamlee/politico-client/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/8ab04f6aa8fd6f37abb1/test_coverage)](https://codeclimate.com/github/walsamlee/politico-client/test_coverage) [![Netlify Status](https://api.netlify.com/api/v1/badges/5d386c6a-13fa-43d3-9537-4ba4b3d3e3aa/deploy-status)](https://app.netlify.com/sites/sam-politico-client/deploys)
 
 
 ## Table of Contents
@@ -73,16 +73,19 @@ To run test cases
 
 ## _API Endpoints_
 
-| Endpoint             |                   Functionality                   | HTTP method |
-| -------------------- | :-----------------------------------------------: | ----------: |
-| /api/v1/auth/signup  |               Create a user account               |        POST |
-| /api/v1/auth/login   |                   Login a user                    |        POST |
-| /api/vi/office/run   | User can declare an interest to run for an office |        POST |
-| /api/vi/candidates   |      User can get all interested candidates       |         GET |
-| /api/vi/offices      |         User can get all political office         |         GET |
-| /api/vi/parties      |        User can get all political parties         |         GET |
-| /api/vi/parties      |        Admin can create a political party         |        POST |
-| /api/vi/offices      |        Admin can create a politcal offices        |        POST |
+| Endpoint                      |                   Functionality                   |   HTTP method |
+| ----------------------------- | :-----------------------------------------------: | ------------: |
+| /api/v1/auth/signup           |               Create a user account               |          POST |
+| /api/v1/auth/login            |                   Login a user                    |          POST |
+| /api/vi/office/run            | User can declare an interest to run for an office |          POST |
+| /api/vi/candidates            |      User can get all interested candidates       |           GET |
+| /api/vi/offices               |         User can get all political office         |           GET |
+| /api/vi/parties               |        User can get all political parties         |           GET |
+| /api/vi/parties               |        Admin can create a political party         |          POST |
+| /api/vi/parties/:partyId      |        Admin can delete a political party         |        DELETE |
+| /api/vi/parties/:partyId/name |        Admin can edit a political party           |        PATCH  |
+| /api/vi/offices               |        Admin can create a politcal offices        |          POST |
+
 
 ## License
 
