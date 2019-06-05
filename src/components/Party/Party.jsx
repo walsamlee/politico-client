@@ -15,7 +15,7 @@ const Party = ({ party }) => {
         <h3>{ party.name }</h3>
         {
           <div>
-            <Link to={`/editparty/${party.id}`} className="btn btn-cart">Edit</Link>
+            <Link to={`/editparty?=${party.id}`} className="btn btn-cart">Edit</Link>
             <DeleteParty partyId={party.id} />
           </div>
         }
